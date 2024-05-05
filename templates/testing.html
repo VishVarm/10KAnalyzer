@@ -1,0 +1,135 @@
+{% extends 'base2.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1 style="text-align: center">Company Insights</h1>
+	<hr color= #ffd40c>
+	
+	
+
+
+<div id="General">
+	<hr color= #ffd40c style="width:0px;margin-top:50px;margin-left:-20px">
+	<button class="back-button" onclick="goBack()">Back</button>
+ 	<h2 class="headerGeneral" style="text-align: leading;margin-top:-50px"><b>Pfizer's Financial Information</b></h1>
+	<div class="generalStats">
+		<p style="text-align:left;margin-top:-90px;margin-left:13px">Revenue Per Year</p>
+	</div>
+</div>
+
+
+<script>
+	function goBack() {
+        window.history.back();
+    }
+</script>
+
+<div id="Chart" class="chart" style="width:240px;height:140px;margin-left:13px">
+<canvas id="lineChart" width="900" height="400"></canvas>
+</div>
+<script>
+	var ctx = document.getElementById("lineChart").getContext("2d");
+	var lineChart = new Chart(ctx, {
+		type: "line",
+		data: {
+			labels: {{ labels | safe}},
+			datasets: [
+				{
+					labelColor: "#FFFFFF",
+					label: "Data points",
+					scaleFontColor: "#FFFFFF",
+					data: {{ values | safe}},
+					fill: false,
+					borderColor: "rgb(80, 192, 192)",
+					lineTension: 0.1
+	
+				}
+			]
+		},
+		options: {
+			responsive: false,
+			scales: {
+				xAxes: [{
+					gridLines: {color: "#FFFFFF"}
+
+				}],	
+				yAxes: [{
+					gridLines: {color: "#FFFFFF"},
+					ticks: {
+                		min: 40000
+           		 	}
+				}]
+			}
+		}
+	});
+</script>
+</div>
+
+<div class="generalStats2">
+	<p style="text-align:left;margin-top:420px;margin-left:13px">Net Income Per Year</p>
+</div>
+
+<div id="Chart2" class="chart2" style="width:240px;height:140px;margin-left:13px">
+<canvas id="lineChart2" width="900" height="400"></canvas>
+</div>
+<script>
+	var ctx = document.getElementById("lineChart2").getContext("2d");
+	var lineChart = new Chart(ctx, {
+		type: "line",
+		data: {
+			labels: {{ labels2 | safe}},
+			datasets: [
+				{
+					label: "Data points",
+					data: {{ values2 | safe}},
+					fill: false,
+					borderColor: "rgb(80, 192, 192)",
+					lineTension: 0.1
+				}
+			]
+		},
+		options: {
+			responsive: false,
+			scales: {
+				xAxes: [{
+					ticks: {
+                		color: "#FFFFFF"  // Change the color of x-axis labels
+            		},
+					gridLines: {color: "#FFFFFF"}
+
+				}],	
+				yAxes: [{
+					ticks: {
+                		color: "#FFFFFF"  // Change the color of x-axis labels
+            		},
+					gridLines: {color: "#FFFFFF"}
+				}]
+			}
+		}
+	});
+</script>
+</div>
+
+<div class="insights">
+	<p style="text-align:left;margin-left:20px;margin-top:400px">Analysis</p>
+</div>
+<div class="analysistext" style="width:1290px">
+	<pre style="text-align:left;margin-left:20px;margin-top:00px;white-space: pre-wrap;font-family:Rajdhani">{{analysis}}</pre>
+</div>
+
+
+
+<!--
+<div class="General">
+	<h2 class="headerGeneral" style="text-align: leading"><b>{{username}}'s General Stats</b></h1>
+	<div class="generalStats">
+		<p style="text-align:left;">KD Ratio = {{kdstat}}</p>
+		<p style="text-align:left;">Kills = {{killstat}}</p>
+	</div>
+</div>
+-->
+{% endblock %}
+

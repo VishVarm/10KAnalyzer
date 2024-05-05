@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body {
+    background: #000000;
+    background-attachment: fixed;
+    font-family: Rajdhani;
+    color: #ffd40c;
+    margin: 0;
+    height: 100%;
+
+}
+
+.headerGeneral {
+	/*position: fixed;*/
+	top: 80px;
+	left: 20px;
+	right: 100px;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #ffd40c;
+}
+.headerGeneral2 {
+	/*position: fixed;*/
+	top: 80px;
+	left: 20px;
+	right: 100px;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #ffd40c;
+}
+
+
+.generalStats {
+	/*padding: 50px;*/
+	top: 260px;
+	left: 50px;
+	right: 1200px;
+	border: 2px solid black;
+	text-decoration: underline;	
+	color: #ffd40c;
+	padding-left: 5px;
+}
+.generalStats2 {
+	/*padding: 50px;*/
+	top: 610px;
+	left: 50px;
+	right: 1200px;
+	border: 2px solid black;
+	text-decoration: underline;	
+	color: #ffd40c;
+	padding-left: 5px;
+}
+
+.back-button {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #ffd40c;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chart {
+	position: absolute;
+	top: 190px;
+	font-size: 14px;
+
+}
+.chart2 {
+	position: absolute;
+	top: 700px;
+	font-size: 14px;
+
+}
+
+.insights {
+	text-decoration: underline;	
+}
+
+
+/*
+#General {background-color: red;}
+#Ranked {background-color: green;}
+#Casual {background-color: blue;}
+#Extra {background-color: orange;}
+*/
