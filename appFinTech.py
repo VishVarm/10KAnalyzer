@@ -9,6 +9,10 @@ finalData = getData()
 
 @app.route('/', methods=["POST","GET"])
 def base_page():
+	"""
+	This function displays the base page of the web app that asks the user to input
+	either $PFE or $ZM to view the company's financial information.
+	"""
 	if request.method == "POST":
 		stockticker = request.form["stockticker"]
 		if stockticker == "$PFE":
@@ -22,6 +26,10 @@ def base_page():
 	
 @app.route('/$PFE')
 def pfe_page():
+	"""
+	This function displays the page containing the financial information of Pfizer
+	and the associated analysis.
+	"""
 	# Display data and analysis for Pfizer
 	PFERev = finalData["PFERev"]
 	# Collect revenue data for Pfizer in a list of tuples to be used in Chart JS
@@ -39,6 +47,10 @@ def pfe_page():
 
 @app.route('/$ZM')
 def zm_page():
+	"""
+	This function displays the page containing the financial information of Zoom
+	and the associated analysis.
+	"""
 	# Display data and analysis for Zoom
 	ZMRev = finalData["ZMRev"]
 	# Collect revenue data for Zoom in a list of tuples to be used in Chart JS
