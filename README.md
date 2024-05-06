@@ -25,3 +25,6 @@ JavaScript: I used JavaScript to script pageflow within the web app.
 ChartJS: I used ChartJS to create the data visualization as it is a very simple JavaScript library that allowed me to create charts of Pfizer's and Zoom's revenue/net income per year and add it to the web app.
 
 I chose to focus on the insight of how the COVID-19 pandemic affected Zoom and Pfizer as analyzing how companies react to major events can help inform stockholders and investors on the reliability of a company. For example, if another pandemic or similar event occurs in the future, then knowing how comapnies reacted to the last pandemic will be very useful for users to be able to predict which companies will do well.
+
+Demo of Web App: https://youtu.be/J9dd82nQ5-s
+
