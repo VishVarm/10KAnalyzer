@@ -43,6 +43,7 @@ def pfe_page():
 	values2 = [row[1] for row in data2]
 	PFEAnalysis = finalData["PFEResponse"]
 	PFEAnalysis = PFEAnalysis.replace("*", "")
+	PFEAnalysis = PFEAnalysis.replace("#", "")
 	return render_template("testing.html", labels=labels, values=values, labels2=labels2, values2=values2, analysis=PFEAnalysis)
 
 @app.route('/$ZM')
@@ -64,6 +65,7 @@ def zm_page():
 	values2 = [row[1] for row in data2]
 	ZMAnalysis = finalData["ZMResponse"]
 	ZMAnalysis = ZMAnalysis.replace("*", "")
+	ZMAnalysis = ZMAnalysis.replace("# #", "")
 	ZMAnalysis = ZMAnalysis.replace("#", "")
 	return render_template("testing2.html", labels=labels, values=values, labels2=labels2, values2=values2, analysis=ZMAnalysis)
 
