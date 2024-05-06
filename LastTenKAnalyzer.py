@@ -179,6 +179,7 @@ def getData():
 	# Generate an AI analysis of Zoom's financial information in the context of COVID-19 
 	response = model.generate_content("Perform an analysis on Zoom's financial information over the last few years. \
 		Specifically, analyze the impact of the COVID-19 pandemic on Zoom as a company based on the following data. \
+		The dollar amounts are in thousands. \
 		Revenue By Year: " + str(revenue_by_year) + "\n \
 		Net Income By Year: " + str(net_income_by_year))
 
@@ -291,6 +292,7 @@ def getData():
 	# Generate an AI analysis of Pfizer's financial information in the context of COVID-19 
 	pferesponse = model.generate_content("Perform an analysis on Pfizer's financial information over the last few years. \
 		Specifically, analyze the impact of the COVID-19 pandemic on Pfizer as a company based on the following data. \
+		The dollar amounts are in thousands. \
 		Revenue By Year: " + str(pfe_revenue_by_year) + "\n \
 		Net Income By Year: " + str(pfe_net_income_by_year))
 
