@@ -169,7 +169,7 @@ def getData():
 
 	# Start LLM API usage
 	# Input Google API key
-	GOOGLE_API_KEY = "AIzaSyAgh2xEpGk53TmhMki0WNVZFVR0C9UX_kg"
+	GOOGLE_API_KEY = "INSERT API KEY HERE"
 	
 	# Configure the Google genai LLM to use gemini-pro
 	genai.configure(api_key=GOOGLE_API_KEY)
