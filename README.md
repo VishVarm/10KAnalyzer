@@ -1,6 +1,7 @@
 # Financial Services Innovation Lab Project
 
 For this 10-K analyzer project, I used a two layered approach.
+
 I used Python, BeautifulSoup, Pandas, Flask, and the Google Gemini LLM API for the backend to analyze the 10-K documents. I used HTML/CSS, JavaScript, and ChartJS for the front end to display the data.
 
 Back End Tech Stack:
